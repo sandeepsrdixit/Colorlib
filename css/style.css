@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid green; */
+    list-style: none;
+}
+
+
+
+html {
+    overflow-x: hidden;
+    font-family: "Cerebri-sans", Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+        'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+
+}
+
+.navbar-links {
+    display: inline-block;
+    font-size: large;
+}
+
+.navbar-logo {
+    font-size: 45px;
+    color: white;
+    font-weight: 900;
+    font-family: "Abril Fatface", times, serif;
+    margin-top: 30px;
+}
+
+hr {
+    color: black;
+    border: 1px solid rgb(198, 230, 16);
+}
+
+.mob-n-icon {
+    height: 35px;
+    width: 35px;
+    color: gray;
+}
+
+.mobile-navbar-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid gray;
+    margin-top: px;
+}
+
+.mobile-navbar-btn [name="close-outline"] {
+    display: none;
+}
+
+.sec-1 {
+    display: flex;
+    height: 82vh;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.main-sections {
+    position: relative;
+
+}
+
+.top-h {
+    font-size: 35px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    font-family: "Abril Fatface", times, serif;
+}
+
+.top-p {
+    color: white;
+    font-weight: 900;
+}
+
+.sec-2-p {
+    color: black;
+    font-size: 10px;
+
+}
+
+a {
+    color: gray;
+}
+
+button {
+    padding: 18px 40px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: medium;
+}
+
+button:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.692);
+    transition: 0.5s;
+
+}
+
+a:hover {
+    color: rgb(184, 184, 184);
+}
+
+
+.navbar-links:hover {
+    color: blueviolet;
+    transition: 0.3s;
+
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<< MEDIA QUARY ON 767PX >>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* @media(min-width:319px) and (max-width:720px) {
+
+    .navbar {
+
+        height: 100vh;
+    }
+} */
+
+
+
+.mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+
+}
+
+.header {
+    position: relative;
+
+}
+
+.navbar {
+
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: whitesmoke;
+    top: 0px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 999;
+
+
+}
+
+.navbar-list {
+    flex-direction: column;
+    text-align: center;
+
+
+}
+
+.navbar-links {
+    font-size: 40px;
+    font-family: "Abril Fatface", times, serif;
+    font-weight: 700;
+
+}
+
+.navbar-links:nth-child(1) {
+    color: blueviolet;
+}
+
+.active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.active .mobile-navbar-btn .mob-n-icon[name="close-outline"] {
+    display: block;
+}
+
+.active .mobile-navbar-btn .mob-n-icon[name="menu-outline"] {
+    display: none;
+}
+
+.sec-2 .col-lg-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+h4 {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Abril Fatface", times, serif;
+}
+
+
+/* ,,,,,,,,,,,,,,,,Footer section,,,,,,,,,,,,,, */
+
+.footer-sec {
+    background-color: rgb(74, 74, 100);
+}
+
+i {
+    font-size: 45px;
+
+}
+
+.logos {
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+
+}
+
+.footer-logo {
+    color: white;
+    font-weight: 800;
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+}
+
+.footer-links {
+    text-align: center;
+    margin: 7px;
+
+
+}
+
+.subscribe-sec {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-btn {
+    color: white;
+    font-size: medium;
+    padding: 10px 75px;
+    margin-top: 20px;
+
+}
+
+.footer-para {
+    color: white;
+}
+
+h5 {
+    color: white;
+}
+
+/* .gallery-sec {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right top, #c7d4e4, #c4dbe3, #c8e0de, #d4e4d9, #e2e6d8);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 150px;
+    color: rgb(196, 92, 196);
+    font-weight: 900;
+
+} */
+
+.sec-4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px;
+    box-shadow: 0 0 18px #ddd;
+    margin-top: 20px;
+
+
+}
+
+.sec-4 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: anuj;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: relative;
+
+
+
+
+}
+
+.sec-4-H {
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+.sec-4-p {
+    color: rgb(92, 83, 83);
+    text-align: justify;
+    font-size: 15px;
+    word-spacing: 1px;
+
+}
+
+@media(min-width:315px) and (max-width:767px) {
+    .text {
+        font-size: 80px;
+
+    }
+
+}
+
+@keyframes anuj {
+    0% {
+        top: 0px;
+    }
+
+    25% {
+        top: 30px;
+    }
+
+    75% {
+        top: 0px;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+.sec-3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+span {
+
+    border: 2px solid #637381;
+    font-size: 22px;
+    color: #637381;
+    border-radius: 100%;
+    padding: 3px 9px;
+    height: 40px;
+    width: 40px;
+    line-height: 34px;
+    font-weight: 600;
+
+
+}
+
+.sec-3-main-h {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sec-3 p {
+    color: #637381;
+    font-size: 16px;
+}
+
+.sec-3 h4 {
+    font-size: 21px;
+    font-weight: 600;
+    margin: 10px 0 10px;
+    color: #0a0a0a;
+
+}
+
+.sec-3-b {
+    color: white;
+    font-weight: 600;
+    background-color: rgb(114, 153, 54);
+    border-radius: 40px;
+}
+
+.sec-3 img {
+    margin-top: 30px;
+}
+
+.card-span {
+    background-color: #637381;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px 15px;
+}
+
+
+
+
+.sec-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-text {
+    color: #0a0a0a;
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+.span-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0a0a0a;
+    margin-top: 12px;
+}
+
+.card-text-1 {
+    margin-bottom: 100px;
+}
+
+@media (min-width:320px)and (max-width:767px) {
+    .card-sec img {
+        display: none;
+    }
+
+}
+
+.card-sec {
+
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px;
+    box-shadow: 0 0 18px #ddd;
+
+}
+
+.sec-5-hdng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 0;
+    color: black;
+
+
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.sec-5-tp {
+    color: #0a0a0a;
+    margin-top: 5px;
+}
+
+.modal-title {
+    color: black;
+}
+
+.modal-body {
+    font-size: 14px;
+    line-height: 2;
+    text-align: left;
+    background-color: #fff;
+    width: 100%;
+}
+
+.modal-header {
+    background-color: #f2f2f2;
+    border-radius: 0;
+    width: 100%
+}
+
+.btn {
+    color: blue;
+    background-color: transparent;
+}
+
+.card-body .btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.back-video {
+    position: absolute;
+    left: 0;
+    height: 170vh;
+    z-index: -1;
+
+}
+
+
+
+.checked {
+    color: #fec42d;
+    font-size: 16px;
+}
+
+.non-checked {
+    font-size: 16px;
+}
+
+.star {
+    float: left;
+}
+
+.designers-intro {
+    box-shadow: 0 0 18px #ddd;
+    width: 22%;
+
+}
+
+.sec-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+
+}
+
+.designers-name {
+    font-size: 18px;
+    margin-top: 60px;
+}
+
+.c-projects {
+    font-size: 12px;
+    border: none;
+
+}
+
+.about-designers {
+    font-size: 15px;
+    line-height: 30px;
+
+}
+
+.sec-6-star {
+    color: #fec42d;
+    font-size: 14px;
+    margin: 20px 0;
+
+}
